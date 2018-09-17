@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  ssh:
+    image: "choffmeister/kubernetes-ssh-tunnel"
+    environment:
+      AUTHORIZED_KEY: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAA/g2dMJ/H87R6JDYRwbcmuWoTMz2GktScjEaPyxcQq0B3Y4Q/yuCMhgdI2/yRrZ6qXVvehBqZnHuP6cOCMKJ3Y9NnTnZyW4Apul4xLLptSmYci8lOP1RoGrCoFu06VDv5W9W+vecTbShHMiQAsjDc0csL2TZAiIWxUlQ00X8jHAPr+A9gq4nsvhQtBb3eFaD1niJ+hpl2e1SPhefSa3fvnUeXHaeSYiF76wyu5plwwlhUi6AJUL8rZ2iiIqw78dpxyeU0EIXMGf1H0NVg0RkcfEWP6jFNdvimihXJB6VkqzW9w8t69bmDC5e6yRIIBuQWb68epagc44TrwFiUOdrn test"
+    ports:
+      - "2222:22"
+    
+  mongodb:
+    image: "mongo:3.6.3"
